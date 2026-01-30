@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Login Page">
+        <meta name="keywords" content="HTML, CSS,JS">
+        <meta name="author" content="Keschella Parajuli">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | EcoMart</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <style>
+            .container{
+                height:400px;
+                width: 20%;
+                padding:30px;
+                max-width: 800px;
+                margin: 50px auto; /* Adds vertical breathing room and keeps centered.*/
+            }
+            .container h3,.container label{
+                color: #273b09;
+            }
+            form input[type="text"] {
+                height:10%;
+                width:70%;
+                margin:20px;
+                font-size:16px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #54533B;;
+                border-style:solid;
+                border-width:1px;
+                border-color: rgb(53, 53, 53);
+                border-radius: 3px; /* roundness*/
+                box-shadow: 3px 3px 0px #273B09;
+            }
+            input[type="password"]{
+                height:10%;
+                width:70%;
+                margin:10;
+                font-size:16px;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #54533B;;
+                border-style:solid;
+                border-width:1px;
+                border-color: rgb(53, 53, 53);
+                border-radius: 3px; /* roundness */
+                box-shadow: 3px 3px 0px #273B09; /*gives horizontally 3px right, vertically 3px down, with zero spread */
+            }
+            .leaf{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="#">Login</a></li>
+                </ul>
+        </nav>
+
+        <section class="container"> 
+            <h3> Login</h3>  <img src="../Assets/leaf.png" width="30px" class="leaf1">     
+            <br><br>
+            <form class="form">
+                <label>Enter Username:</label> <input type="text" placeholder="Enter Username" id="user"><br><br>
+                <label>Enter Password:</label><input type="password" placeholder="Enter Password" id="pass"><br><br>
+                <button onclick="check()"> Login</button>
+            </form>
+        </section>
+            
+        <br><br><br>
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function check(){
+                const u=document.getElementById("user").value;
+                const p=document.getElementById("pass").value;
+
+                if( u=="" || p==""){
+                    alert("Please fill in the fields to proceed");
+                    return false;
+                }
+                else{
+                    window.location.href="aboutus.html";
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About Us">
+    <meta name="keywords" content="HTML, CSS, JS">
+    <meta name="author" content="Pranisha Bhuju">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | EcoMart</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto; /* margin of 40px on top and bottom, makes left right side in center*/
+        padding: 20px;
+        }
+        
+        /* team card */
+          .team-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            gap:5%;
+        }
+         .team-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+        }
+        a{
+            text-decoration: none;
+        }
+         .team-card:hover {
+           transform: translate(-5px, -5px); /*moves up on hover*/
+            box-shadow: 3px 3px 0px #273B09;  /*gives horizontally 3px right, vertically 3px down, with zero spread */
+            cursor: pointer;
+        }
+          .member-header {
+            background-color: #ffffff;
+            color: #273B09;
+            padding: 25px;
+            text-align: center;
+           
+        }
+         .member-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0px auto 15px;
+            background-color: #e0f2e0;
+            display: flex;
+            align-items: center;
+            
+        }
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; /* Ensures the image itself is clipped to a circle */
+            aspect-ratio: 1/ 1;
+            object-fit: cover;  /* Prevents the image from stretching/squishing */
+            display: block;     /* Removes unwanted whitespace at the bottom */
+        }
+
+            .member-photo i {
+            font-size: 70px;
+            color: #4a7c59;
+        }
+        .member-name {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+         .member-role {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 16px;
+        }
+           /* Portfolio Modal */
+        .team-header{
+            color:#273B09;
+        }
+
+
+
+</style>
+   <body>
+<!-- Header -->
+   
+     <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="#">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+        </nav>
+     <div class="container">
+
+        <div class="team-header">
+            <h1>The EcoMart Team</h1><img src="../Assets/leaf.png " width="30px" class="leaf1">
+            <p>Get to know the people behind our eco-friendly mission</p><br>
+        </div>
+        <div class="team-grid">
+            <div class="row">
+            <!-- Team Member 1 -->
+            
+            <a href="./Portfolio/member1.html"><div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"><img src="../Assets/Photos/member1.png"></i>
+                    </div>
+                    <h3 class="member-name">Keschella Parajuli</h3>
+                    <p class="member-role">Login and Help&Support Page</p>
+                </div>
+            </div></a>
+            <!-- Team Member 2 -->
+            <a href="./Portfolio/member5.html"><div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"><img src=../Assets/Photos/member5.png></i>
+                    </div>
+                    <h3 class="member-name">Ramit Chaudhary</h3>
+                    <p class="member-role">Contact Page</p>
+                </div>
+            </div></a>
+            
+            <!-- Team Member 3 -->
+            <a href="./Portfolio/member4.html"><div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"><img src="../Assets/Photos/member4.png"></i>
+                    </div>
+                    <h3 class="member-name">Devendra Kandel</h3>
+                    <p class="member-role">Home Page and Research Page</p>
+                </div>
+            </div></a>
+            </div>
+
+            <div class="row">
+           <!-- Team Member 4 -->
+            <a href="./Portfolio/member3.html"><div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"><img src="../Assets/Photos/member3.png"></i>
+                    </div>
+                    <h3 class="member-name">Jenish Shrestha</h3>
+                    <p class="member-role">Product Page and Blog Page</p>
+                </div>
+            </div></a>
+            
+            <!-- Team Member 5 -->
+            <a href="./Portfolio/member2.html"><div class="team-card">
+                <div class="member-header">
+                    <div class="member-photo">
+                        <i class="fas fa-user"><img src="../Assets/Photos/member2.png"></i>
+                    </div>
+                    <h3 class="member-name">Pranisha Bhuju</h3>
+                    <p class="member-role">About Us and Portfolio Page</p>
+                </div>
+            </div></a>
+        </div>
+    </div>
+    </div>
+        
+     <!-- Footer -->
+    <br><br>
+    <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
+                        <p><i class="fas fa-phone"></i> 011-98646</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>        

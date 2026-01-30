@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Help and support Page">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Keschella Parajuli">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Help and Support | EcoMart</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        <style>
+            .container{
+                height:fit-content;
+                width: 20%;
+                padding:30px;
+                max-width: 800px;
+                margin: 50px auto; /* Adds vertical breathing room and keeps centered.*/
+            }
+            .container h3,.container label{
+                color: #273b09;
+            }
+            select{
+                width:90%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            footer{
+                position: absolute;
+                bottom:0;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="#">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+        </nav>
+        <div class="content">
+        <section class="container">
+            <h3>How can we help?</h3> <img src="../Assets/leaf.png " width="30px" class="leaf1"> <br><br>
+            <form>
+                <label>Enter your issue:</label>
+                <br><br><select id="Issue" onchange="issue()">
+                    <option value="default">-- Select --</option>
+                    <option value="login">Login Issues</option>
+                    <option value="payment">Payment issues</option>
+                    <option value="return">Return or Exchange a product</option>
+                    <option value="bug">Report in-app bug</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <!--Hidden button thatll appear when 'other' is chosen-->
+                <br>
+                <button type="button" onclick="redirectPage()" style="display:none;" id="redirect">Go to Contact Page</button>
+
+                <!--not visible unless 'other' option is selected-->
+                
+                <!-- Hidden message box thatll appear when some option is selected-->
+                <div id="otherBox" style="display:none;">
+                    <label>Please describe your issue:</label><br><br>
+                    <textarea id="message" rows="5" cols="40"
+                    placeholder="Type your message here..."></textarea><br><br>
+                    <button type="button" onclick="submitIssue()">Submit</button>
+                </div>
+            </form>
+        </section>
+        </div>
+
+        
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+        
+
+        <!--js-->
+        <script>
+            function issue(){
+                const i = document.getElementById("Issue").value;
+                const box = document.getElementById("otherBox");
+                const redirect=document.getElementById("redirect");
+                const message=document.getElementById("message").value;
+
+                if (i==="other" || i=="payment" || i=="return"){
+                    redirect.style.display = "block";
+                    box.style.display = "none";
+                }
+                else if(i=="default"){
+                    redirect.style.display = "none";
+                    box.style.display = "none";
+                }
+                else {
+                    box.style.display = "block";
+                    redirect.style.display = "none";
+                }
+            }
+            function redirectPage(){
+                window.location.href="./contact.html";
+            }
+            function submitIssue(){
+                const message = document.getElementById("message").value;
+                if(message.trim()==""){
+                    alert("Please do not leave the box empty!");
+                }
+                else{
+                    alert("Thank You!");
+                    window.location.href="../index.html";
+                }
+            }
+            
+        </script>
+    </body>
+</html>

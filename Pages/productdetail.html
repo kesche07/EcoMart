@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Products Page">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Jenish Shrestha">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Details | EcoMart</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        .container{
+            background:#c7dbb0;
+            margin:5% auto;
+            width:90%;
+            max-width: 800px;
+            padding:20px 20px;
+            border-radius:15px;
+            display: flex;
+            justify-content: center; /* vertical centering*/
+            align-items: center;/* horizontal centering*/
+}
+/* Product Section */
+        .product{
+            display:flex;
+            align-items: stretch;
+            width:100;
+}
+/* Right Side */
+        .right{
+            width:50%;
+            display: flex;
+            flex-direction: column;
+            text-align: left; 
+            background:#e2ecd3; 
+            padding:20px; 
+            min-height: fit-content;
+}
+/* Left Side */
+.left{
+    display:flex;
+}
+.left img{
+    aspect-ratio: 2/3; /* forces image to be 2:3 ratio */
+    
+    /*makes sure it takes full width and height of .left*/
+    height:100%;
+    width: 100%;
+
+    max-width: 400px;
+    display: block;
+    object-fit: cover; /* avoids stretching */
+    
+}
+
+.qty{
+    gap:5px;
+    display: flex;
+    justify-content: center;
+    margin-top:15px;
+}
+    .qty input[type="number"] {
+        width: 60px;            /* Makes it wider */
+        height: 35px;           /* Matches button height */
+        padding: 5px;           /* Adds space inside for the number */
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;     /* Space between input and button */
+}
+
+    button{
+        height:35px;
+        width:150px;
+    }
+
+    .section{
+			background-color:#e2ecd3; 
+			text-align: center;
+			color:#273B09;
+			width:30%;
+            max-width: 300px;
+			margin:auto;
+			border-radius: 20px;
+			position:relative; 
+			z-index: 3; /* makes it stacked on top of .overlay*/
+		}
+.central{
+    margin: auto;
+    text-align: left;
+    width:fit-content;
+}
+.overlay{
+    position:fixed; /* stays in fixed position on page*/
+    inset:0; /* make it cover whole page*/
+    background:rgba(0,0,0,0.35);
+    display:flex;
+    justify-content: center; /* horizontal centering*/
+    align-items:center; /* vertical centering*/
+    z-index: 2; /* makes it stacked below the .section*/
+}
+.overlay button{
+    margin:10px;
+    width:max-content;
+    padding: 5px 20px;
+    display: inline; /* makes it inline element */
+}
+.hide{
+    display:none;
+}
+
+		
+    </style>
+    
+    </head>
+    <body>
+
+    <!-- NAVBAR -->
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+        </nav>
+        <br>
+
+
+<!-- Product containers -->
+
+<div class="container">
+<div class="product" data-index="0" style="display:flex;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product1.jpg" ><br>
+    </div>
+    <!-- Right -->
+    <div class="right">
+        <h2>Bamboo Bottle</h2>
+<br>
+        <p>
+        This bottle is hand made eco-friendly bottle made by using organic strong bamboo from China.
+        <br>This bottle is very reliable and keeps your drinks clean and fresh.<br>
+         It is a also very duriable and strong with stainless steel cap and inner body.<br> It can store drinks upto 300 degree celcius to -30 degree celcius.<br> It is light weighted and very portable.<br> It is a stylist day to day eco-friendly product made by natural material bottle with a very suitable price.<br>
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 3500</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty0" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(0)">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+ <div class="product" data-index="1" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product2.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Bamboo Toothbrush</h2>
+<br>
+        <p>
+            Enjoy a toothbrush that is soft, gentle and gets rid of all og the plaque of your teeth.
+            <br>This Bamboo toothbrush is the right choice for someone looking to take care of their oral health and
+            <br>
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 200</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty1" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(1)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+    <div class="product" data-index="2" style="display: none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product3.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Hello Tea</h2>
+<br>
+        <p>
+            Refreshing, fresh new taste like never before.<br>
+            Assorteds flavours of strawberry, orange, green tea, hibiscus tea and chamomile tea for the everyday person..
+         </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 550</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty2" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(2)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+    <div class="product" data-index="3" style="display: none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product4.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Wooden Utensil Set
+        </h2>
+<br>
+        <p>
+        Pack of high-quality handcrafted wooden utensils that are safe for cookware and heat resistant.<br>
+        Masterfully crafted to last a long time.<br>
+        Anti-Bacterial properties prevent molding during its storage.<br>
+        Set comes with free cloth bag on each purchase.
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 4500</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty3" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(3)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+    <div class="product" data-index="4" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product5.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Eco Plate</h2>
+<br>
+        <p>
+         Make cleanup a breeze and stay eco-conscious. <br>
+         With this 125 pack of disposable plates made out of leaf and recycled paper, feel free to eat and serve your friends at parties<br>
+         without having to worry about the dangers of single use plastics.
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 400</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty4" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(4)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+
+<div class="product" data-index="5" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product6.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Eco Comb</h2>
+<br>
+        <p>
+        A handcrafted sandalwood comb that not only easily gets through nots and tangles, but also distributes the natural oils of the scalp ensuring 
+        soft, shiny and healthy hair.
+        Comews in a set of 3 combs;<br>
+        <ul style="font-family: Lucida Sans; padding:5px; margin-left: 4px;">
+            <li>Styling comb</li>
+            <li>Detangling comb</li>
+            <li>Hand Carry Comb</li>
+        </ul>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 150</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty5" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(5)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+<div class="product" data-index="6" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product7.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>TeaTree Shampoo</h2>
+<br>
+        <p>
+        Feel refreshed with our organic TeaTrea Shampoo that combats dandruff, improves scalp health and gets rid of greasy buildup.
+        TeaTree Oil regulates oil production of the scalp and promotes new hair growth.
+        With Hyaluronic Acid, the hair is mosturized and fresh after each wash.
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 650</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty6" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(6)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+<div class="product" data-index="7" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product8.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Hair Ties</h2>
+<br>
+        <p>
+        Pack of hairties made out of re4cycled clothing that are great for an athletic person, or if you're on the go.
+        Makes hairstyling quick and easy.
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 75</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty7" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(7)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="product" data-index="8" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product9.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Hemp Socks</h2>
+<br>
+        <p>
+        Hemp socks that are soft and anti-bacterial, ensuring that the feel are kept clean and warm.
+        Good thermal regulation for both summer and winter season.
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 300</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty8" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(8)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+    <div class="product" data-index="9" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product10.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Neem Soap</h2>
+<br>
+        <p>
+            Our Neem Soap is the solution for acne-prone individuals as it prevents acne by regulating oil while being gentler than harsher chemicals like glycolic acid.
+            It is suitable for all skintypes and leaves your skin feeling plump- and smooth.
+            Especially formulated with oat to help individuals struggling with eczema and dryness. 
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 500</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty9" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(9)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    </div>
+    <div class="product" data-index="10" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product11.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>ToteBag</h2>
+<br>
+        <p>
+        Be stylish and environmentally concious with our totebag.
+        Perfect for going on a stroll and spacious enough to keep essentials.
+
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 250</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty10" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(10)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+    <div class="product" data-index="11" style="display:none;">
+    <!-- Left -->
+    <div class="left">
+         <img src="../Assets/product12.jpg" ><br>
+</div>
+<!-- Right -->
+    <div class="right">
+        <h2>Copy</h2>
+<br>
+        <p>
+            An essential for a student or an officeworker.
+            Each purchase comes with 3 copies made out of recycled paper to quickly jot down ideas or 
+            calculate arithmetics.
+        </p>
+<br>
+        <div class="price">
+            <p><b>Price:</b><p>NRs. 150</p></p>
+        </div>
+<br>
+        <div class="qty">
+            <label>Amount:</label>
+            <input type="number" id="qty11" value="1" min="1" style="width:50px;">
+            <br></br>
+            <button onclick="showBox(11)">Add to Cart</button>
+        </div>
+
+    </div>
+    </div>
+
+    <!--popup!-->
+		<div class="overlay hide" id="overlay">
+			<div class="section hide" id="container">
+				<p id="message">
+                </p>
+			</div>
+		</div>
+</div>
+ <br><br>
+    <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p><i class="fas fa-envelope"></i> contact@ecomartnp.com</p>
+                        <p><i class="fas fa-phone"></i> 011-98646</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+        <script src="../JS/script.js"></script>
+    </body>
+    <script>
+const prices = [3500,200,550,4500,400,150,650,75,300,500,250,150]; /* prices of products acc to data index*/
+const names = [
+  'Bamboo Bottle','Bamboo Toothbrush','Hello Tea','Wooden Utensil Set',
+  'Eco Plate','Eco Comb','TeaTree Shampoo','Hair Ties',
+  'Hemp Socks','Neem Soap','Totebag','Recycled Paper Copy'
+];/* names of products acc to data index*/
+
+// for overlay 
+const box = document.getElementById("container"); //gets container
+const overlay = document.getElementById("overlay"); // gets overlay
+const message = document.getElementById("message"); // gets message
+
+//hides overlay
+function closeBox() {
+  box.classList.add("hide"); 
+  overlay.classList.add("hide");
+}
+
+//shows overlay
+function showBox(index) {
+  const qtyInput = document.getElementById("qty" + index); //gets quantity of item
+  const quantity = Number(qtyInput.value); //makes it number
+  const price = prices[index]; // gets price according to the index
+  const total = quantity * price; //calculates total
+
+ /* edits the message in overlay*/ 
+ message.innerHTML = `
+    <p>
+      <strong>${names[index]}</strong><br><br>
+      <div class="central">Quantity: ${quantity}<br>
+      Price per item: NRs. ${price}<br>
+      <strong>Total:</strong><br> NRs. ${total}<br><br>
+      Would you like to checkout?</div>
+    </p>
+    <button onclick="checkout()">Yes</button>
+    <button onclick="closeBox()">No</button>
+  `;
+
+  box.classList.remove("hide"); //removes the hidden
+  overlay.classList.remove("hide");
+}
+
+//when user chooses yes
+function checkout() {
+  alert("Thank you for your purchase! 🛒💚"); 
+  closeBox();
+}
+</script>
+
+</html>

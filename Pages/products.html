@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Products Page">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Jenish Shrestha">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Page | EcoMart</title>
+        <link rel="stylesheet" href="../CSS/style.css">
+        
+    <style>
+        .vessel {
+        display: flex;
+        
+        align-items: stretch;
+    }
+        .category-bar {
+        background-color: white;
+        width: 10%;
+        min-width: 180px;   /* optional: prevents it getting too thin */
+        padding: 20px;
+    }
+
+    table {
+       margin: 20px;
+    }
+    /* PRODUCTS */
+    td{
+        padding:15px;
+    }
+    .products{
+        margin: auto;
+        padding: 40px;
+        width:70%;
+        max-width: 850px;
+    }
+    .product{
+        text-align: center;
+        align-items: center; /* Centers the image and text horizontally */
+        justify-content: center;
+    }
+
+    .product-card{
+        background: white;
+        color: #273B09;
+        box-shadow: 0px 0px 0px #273B09;
+        padding: 20px;
+        border-radius: 15px; 
+        transition:0.2s; /* smooth transition in and out */
+    }
+    .product-card:hover {
+        transform: translate(-5px, -5px); /* moves up on hover */
+        box-shadow: 3px 3px 0px #273B09;
+         
+    }
+
+    .product-card img {
+        width: 100%; /* Makes image responsive to card width */
+        max-width: 184px; 
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px; /* Slightly rounded corners for the image itself */
+        margin-bottom: 15px; /* Space between image and text */
+    }
+    .column{
+         margin:auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #searchbar {
+        border-radius: 10px;
+        display: block; 
+        margin: 10px 0 0 auto; /* 10px up, makes it automatically on the right*/  
+        width: 250px;      
+    }
+    input[type="search"]{
+        text-align: left;
+    }
+    .highlight{
+        background-color: #4f7813;
+        color: #E6EED6;
+        padding: 2px;
+        border-radius: 3px;
+    }
+    .category {
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .category:hover {
+        background-color: #E6EED6;
+        border-radius: 5px;
+    }
+    a{
+        color:#273B09;
+        text-decoration: none;
+    }
+    </style>
+
+    </head>
+    <body>
+
+    <!-- NAVBAR -->
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="#">Products</a></li>|
+                    <li><a href="./contact.html">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+        </nav>
+
+    <!-- PRODUCT GRID -->
+     <div class="vessel">
+     <div class="column">
+        <br>
+        <input type="search" placeholder="  &#x2315 Search" id="searchbar" onkeyup="searchItems()">
+     <table>
+        <tr>
+        <td>
+        <div class="product" data-category="utilities" data-index="0">
+        <div class="product-card">
+            <img src="../Assets/product1.jpg"><br>
+            <h3 class="item-name">Bamboo Bottle</h3>
+        </div><br>
+        <label>Price: NRS. 3500</label>
+        </div>
+        </td>
+        <td>
+        <div class="product" data-category="hygiene" data-index="1">
+        <div class="product-card">
+            <img src="../Assets/product2.jpg" ><br>
+            <h3 class="item-name">Bamboo Toothbrush</h3>
+        </div><br>
+            <label>Price:NRS.200</label>
+        </div>
+        </td>
+
+        <td>
+        <div class="product" data-category="wellness" data-index="2">
+        <div class="product-card">
+            <img src="../Assets/product3.jpg"><br>
+            <h3 class="item-name">Hello Tea</h3>
+        </div><br>
+            <label>Price:NRS.550</label>
+        </div>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+        <div class="product" data-category="utilities" data-index="3">
+        <div class="product-card">
+            <img src="../Assets/product4.jpg"><br>
+            <h3 class="item-name">Wooden Utensils Set</h3>
+        </div><br>
+            <label>Price:NRS. 4500</label>
+        </div>
+        </td>
+
+        <td>
+        <div class="product" data-category="utilities" data-index="4">
+        <div class="product-card">
+            <img src="../Assets/product5.jpg"><br>
+            <h3 class="item-name">Eco Plate</h3>
+        </div><br>
+            <label>Price:NRS. 400</label>
+        </div>
+        </td>
+        
+        <td>
+        <div class="product" data-category="hygiene" data-index="5">
+        <div class="product-card">
+            <img src=  "../Assets/product6.jpg"><br>
+            <h3 class="item-name">Eco comb</h3>
+        </div><br>
+            <label>Price:NRS. 150</label>
+        </div>
+        </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="product" data-category="health" data-index="6">
+                    <div class="product-card">
+                        <img src=  "../Assets/product7.jpg"><br>
+                        <h3 class="item-name">TeaTree Shampoo</h3>
+                    </div><br>
+                    <label>Price:NRS. 650</label>
+                </div>
+            </td>
+
+            <td>
+                <div class="product" data-category="accessory" data-index="7">
+                    <div class="product-card">
+                        <img src=  "../Assets/product8.jpg"><br>
+                        <h3 class="item-name">Hair Ties</h3>
+                    </div><br>
+                    <label>Price:NRS. 75</label>
+                </div>
+            </td>
+
+            <td>
+                <div class="product" data-category="accessory" data-index="8">
+                    <div class="product-card">
+                        <img src=  "../Assets/product9.jpg"><br>
+                        <h3 class="item-name">100% Hemp Socks</h3>
+                    </div><br>
+                    <label>Price:NRS. 300</label>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="product" data-category="hygiene" data-index="9">
+                    <div class="product-card">
+                        <img src=  "../Assets/product10.jpg"><br>
+                        <h3 class="item-name">Neem Soap</h3>
+                    </div><br>
+                    <label>Price:NRS. 500</label>
+                </div>
+            </td>
+
+            <td>
+                <div class="product" data-category="accessory" data-index="10">
+                    <div class="product-card">
+                        <img src=  "../Assets/product11.jpg"><br>
+                        <h3 class="item-name">Totebag</h3>
+                    </div><br>
+                    <label>Price:NRS. 250</label>
+                </div>
+            </td>
+
+            <td>
+                <div class="product" data-category="utilities" data-index="11">
+                    <div class="product-card">
+                        <img src=  "../Assets/product12.jpg"><br>
+                        <h3 class="item-name">Recycled Paper Copy</h3>
+                    </div><br>
+                    <label>Price:NRS. 150</label>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+    </div> 
+    </div> 
+
+    <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+        <script src="../JS/script.js"></script>
+    </body>
+    <script>
+        const prod = document.getElementsByClassName("product"); //reads all items with class name product
+
+    for (let i = 0; i < prod.length; i++) 
+    {
+        prod[i].onclick = function ()  // when product is clicked, this function will run
+        {
+        const index = this.dataset.index; //gets the data index of product and stores.
+        goToDetails(index);
+        };
+    }
+
+    function goToDetails(index) {
+        window.location.href = "./productdetail.html?id=" + index; //redirects to the page and starts query index for that products index
+    }
+
+//search bar
+
+    function searchItems() {
+        const input = document.getElementById('searchbar').value.toLowerCase(); //gets value in searchbar, makes it lowercase
+        const titles = document.getElementsByClassName('item-name'); //goes through all items with class name item-name
+
+        for (let i = 0; i < titles.length; i++) //goes through each title
+        { 
+            const titleText = titles[i].innerText.toLowerCase(); //makes each title lowercase and stores
+
+            if (input !== "" && titleText.includes(input))//if input is not null and titleText has the letter
+            {
+                titles[i].classList.add('highlight'); //adds highlight
+        } 
+            else {
+                titles[i].classList.remove('highlight'); //removes highlight
+        }
+    }
+}
+</script>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Contact Page">
+  <meta name="keywords" content="HTML, CSS, JS">
+  <meta name="author" content="Ramit Chaudary">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | EcoMart</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <style>
+.container{
+  padding:10px;
+  border-radius: 0px;
+}
+.content{
+  width:fit-content;
+  margin: 40px auto; /* vertical breathing room and automatically aligns horizontally*/
+  display: flex;
+  flex-direction: row; /* aligns in row */
+  justify-content: center;
+}
+
+.location {
+  height: 300px; /* bigger map */
+}
+
+section{
+  margin: 10px;
+}
+.content{
+  color:#273B09;
+  padding: 10px 10px 60px 10px; /* adds 60px padding to only bottom but 10 elsewhere*/
+  border-radius: 20px;
+  background-color:rgba(35, 115, 1, 0.1);
+}
+
+/** form**/
+form{
+  height:100%;
+}
+
+.row{
+  display:flex;
+}
+.group {
+  margin:5px;
+  display: flex;
+  flex-direction: column; /* makes items stack ontop of each other*/
+}
+
+textarea {
+  height: 190px;
+}
+input{
+  height:50%;
+  width:80%;
+}
+.photo{
+  width:50px;
+}
+.container{
+  color:#273B09;
+}
+
+</style>
+</head>
+<body>  
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>|
+                    <li><a href="./blog.html">Blog</a></li>|
+                    <li><a href="./aboutus.html">About Us</a></li>|
+                    <li><a href="./products.html">Products</a></li>|
+                    <li><a href="#">Contact Page</a></li>|
+                    <li><a href="./helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+        </nav>
+    <div class="container">
+        <h3>Contact Us</h3><img src="../Assets/leaf.png" width="25px" class="leaf1"> 
+    </div>
+    <div class="content">
+      <section>
+        <div class="location">
+          <h3>Our Location</h3><br><br>
+          <!--iframe embed from google-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.1012356360407!2d85.34919730000001!3d27.683265799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198cc3c999a3%3A0x397a6a67ad50011c!2sNew%20Baneshwor%20Rd%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1768392133169!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </iframe>
+         </div>
+      </section>
+
+      <section>
+        <form>
+          <div class="row">
+            <div class="group">
+              <label>First Name</label>
+              <input type="text" placeholder="Enter First Name" id="fname" />
+            </div>
+
+            <div class="group">
+              <label>Email:</label>
+              <input type="email" placeholder="Enter Email Address" id="email" />
+            </div>
+        </div>
+
+          <div class="group">
+            <label>Message</label>
+            <textarea placeholder="Enter your Message" id="mess"></textarea>
+          </div><br>
+          <button type="button" onclick="verify()">Send Message!</button>
+        </form>
+      </section>
+      
+    </div>
+    <br>
+  </section> 
+
+        <footer >
+          <h3>Other Ways to Contact Us</h3><br><br>
+            <div class="footer-content">
+              <div class="footer-section">
+                  <img src="../Assets/phone icon.png" class="photo"><br><br>
+                  <strong>Phone Number</strong><br>
+                  <p>970-000-0000</p>
+              </div>
+              <div class="footer-section">
+                <img src="../Assets/mail icon.png" class="photo"><br><br>
+                <strong>Email Address</strong><br>
+                <p>ecomartteam@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <img src="../Assets/share icon.png" class="photo"><br><br>
+                <strong>Social Media</strong>
+                <p>dfd</p>
+              </div>
+            </div><br><br><br>
+                <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../index.html">Home</a>
+                        <a href="./products.html">Products</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+      function verify(){
+          const name=document.getElementById('fname').value;
+          const mail=document.getElementById('email').value;
+          const message=document.getElementById('mess').value;
+
+          if(name.trim()===""|| mail.trim()==="" ||  message.trim()==""){
+            alert("Please fill in all the fields!!");
+          }
+          else{
+            alert("Thank You for your message!");
+            window.location.href="../index.html";
+          }
+      }
+    </script>
+</html>
