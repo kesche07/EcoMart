@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Pranisha Bhuju">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ramit's Portfolio | EcoMart</title>
+        <link rel="stylesheet" href="../../CSS/style.css">
+    </head>
+    <style>
+           h1{
+                color:#273B09;
+            }
+            .container{
+                width:fit-content;
+                max-width: 600px;
+                padding:10px;
+                margin: 30px auto;
+            }
+            .profile{
+                display:flex;
+                flex-direction: row;
+            }
+            .container p{
+                color:#273B09;
+                text-align: left;
+            }
+            .photo img{
+                border-top-left-radius: 13px;
+                border-bottom-left-radius: 13px;
+                width:310px;
+            }
+
+            /* Thumbnails*/
+        .thumb {
+                width: 100px;
+                height: 60px;
+                
+            }
+            .thumb img{
+                width: 100px;
+                aspect-ratio: 1/ 1;
+                object-fit: cover;  
+            }
+            .behind .background{
+                width:100%;
+            }
+            .behind{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px ;
+                border-radius: 0;
+                width:100%;
+                background-color:rgba(35, 115, 1, 0.2);
+                padding-bottom: 40px;
+            }
+            .background{
+                
+                max-width: 70%;
+                padding:20px;
+                
+            }
+            .thumb {
+                cursor: pointer;
+                transition: transform 0.2s; /* smooth transition on hover */
+            }
+            .thumb-row{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly; /*spaces items evenly */
+            }
+            .thumb img:hover {
+            transform: translate(-5px, -5px); /*moves up on hover*/
+            box-shadow: 3px 3px 0px #273B09;
+            }
+            
+    </style>
+    <body>
+        <body>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>|
+                    <li><a href="../blog.html">Blog</a></li>|
+                    <li><a href="../aboutus.html">About Us</a></li>|
+                    <li><a href="../products.html">Products</a></li>|
+                    <li><a href="../contact.html">Contact Page</a></li>|
+                    <li><a href="../helpsupport.html">Help and Support</a></li>|
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+        </nav>
+        <section class="container">
+        <div class="profile">
+        <div class="photo">
+            <img src="../../Assets/Photos/member5.png"  alt="Team Member">
+        </div>
+        <div class="text">
+            <p >
+                <strong>Ramit Chaudary</strong><br><br>
+                <strong>Profile:</strong><br>
+                Dedicated IT student with a focus on building efficient, scalable digital solutions.<br><br>
+                <strong>Education:</strong><br>
+                2022-2023<br>
+                Highschool<br>
+Trinity International College and SS<br>
+NEB (+2) - Science <br>
+
+
+2025-Onwards<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+<strong>Computer Skills:</strong><br>
+C, HTML, CSS, JavaScript, Java<br><br>
+<strong>Languages:</strong><br>
+Native Nepali<br>
+English<br><br>
+ </section>
+        
+        <section class="behind">
+    <section class="background">
+        <div class="thumb-row">
+            <div class="thumb" ><a href="./member1.html"><img src="../../Assets/Photos/member1.png"></a></div>
+            <div class="thumb" ><a href="./member2.html"><img src="../../Assets/Photos/member2.png"></a></div>
+            <div class="thumb" ><a href="./member3.html"><img src="../../Assets/Photos/member3.png"></a></div>
+            <div class="thumb" ><a href="./member4.html"><img src="../../Assets/Photos/member4.png"></a></div>
+        </div>
+    </section>
+</section>
+        
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../../index.html">Home</a>
+                        <a href="../products.html">Products</a>
+                        <a href="../blog.html">Blog</a>
+                        <a href="../contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </body>
+</html>

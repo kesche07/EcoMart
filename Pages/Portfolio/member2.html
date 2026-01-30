@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio">
+        <meta name="author" content="Pranisha Bhuju">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pranisha's Portfolio | EcoMart</title>
+        <style>
+            h1{
+                color:#273B09;
+            }
+            .content{
+                margin: 30px;
+            }
+            .container{
+                width:fit-content;
+                max-width: 600px;
+                padding:10px;
+                margin: auto; /* centers this block*/
+                background-color: #406540;
+            }
+            
+            /* Profile Photo at Top Center */
+            .profile-photo {
+                text-align: center;
+                margin: 20px 0;
+            }
+            
+            .profile-photo img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 5px solid #406540;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            
+            /* Name Styling */
+            .name {
+                text-align: center;
+                margin: 10px 0 30px 0;
+            }
+            
+            .name h2 {
+                color: #273B09;
+                font-size: 32px;
+                font-weight: bold;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            /* Content Box */
+            .content-box {
+                background: #89a789;
+                padding: 30px;
+                border-radius: 10px;
+                margin-top: 20px;
+                color: #cbeccc;
+            }
+            
+            p{
+                color:#080808;
+                text-align: left;
+                line-height: 1.6;
+            }
+            
+            footer p{
+                color: #e6eed6;
+            }
+            
+            .footer-bottom p{
+                display: block;
+                margin: 4px 0;
+                line-height: 1;
+                text-align: center;
+            }
+            
+            /* Header */
+            .page-header {
+                text-align: center;
+                padding: 20px;
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .page-header h1 {
+                color:#273B09;
+            }
+            
+            
+            /* Section Headings */
+            strong {
+                color: #273B09;
+                display: block;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+            /* thumbnails*/
+            .thumb {
+                width: 100px;
+                height: 60px;
+                
+            }
+            .thumb img{
+                width: 100px;
+                aspect-ratio: 1/ 1;
+                object-fit: cover;  
+            }
+            .behind .background{
+                width:100%;
+            }
+            .behind{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px ;
+                border-radius: 0;
+                width:100%;
+                background-color:rgba(35, 115, 1, 0.2);
+                padding-bottom: 40px;
+            }
+            .background{
+                
+                max-width: 70%;
+                padding:20px;
+                
+            }
+            .thumb {
+                cursor: pointer;
+                transition: transform 0.2s; /* smooth transition on hover */
+            }
+            .thumb-row{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly; /*spaces items evenly */
+            }
+            .thumb img:hover {
+            transform: translate(-5px, -5px); /*moves up on hover*/
+            box-shadow: 3px 3px 0px #273B09;
+            }
+            
+        </style>
+        <link rel="stylesheet" href="../../CSS/style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../../Assets/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>|
+                <li><a href="../blog.html">Blog</a></li>|
+                <li><a href="../aboutus.html">About Us</a></li>|
+                <li><a href="../products.html">Products</a></li>|
+                <li><a href="../contact.html">Contact Page</a></li>|
+                <li><a href="../helpsupport.html">Help and Support</a></li>|
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <div class="page-header">
+                <h1>My Portfolio</h1>
+            </div>
+            
+            <!-- Profile Photo at Top Center -->
+            <div class="profile-photo">
+                <img src="../../Assets/Photos/member2.png" alt="Pranisha Bhuju">
+            </div>
+            
+            <!-- Name Centered Below Photo -->
+            <div class="name">
+                <h2>Pranisha Bhuju</h2>
+            </div>
+            
+            <section class="container">
+                <div class="content-box">
+                    <p>
+                        <strong>About Me:</strong>
+                        Curious and motivated computing student with a passion for technology and sustainable solutions. Eager to learn and apply programming skills to create meaningful digital experiences.<br><br>
+                        
+                        <strong>Education:</strong>
+                        <strong>2022 - 2024</strong><br>
+                        Highschool<br>
+                        Sainik Awasiya Mahavidyalaya, Sallaghari Bhaktapur<br><br>
+                        
+                        <strong>2025 - on-going</strong><br>
+                        BSc (Hons) Computing<br>
+                        Islington College<br><br>
+                        
+                        <strong>Technical Skills:</strong>
+                        • HTML, CSS, JavaScript<br>
+                        • Web Development<br>
+                        • Problem Solving<br><br>
+                        
+                        <strong>Languages:</strong>
+                        • English (Fluent)<br>
+                        • Nepali (Fluent)<br><br>
+                        
+                        <strong>Interests:</strong>
+                        • Web Technologies<br>
+                        • User Experience Design<br>
+                        • Digital Innovation<br>
+                        • Creative Problem Solving<br><br>
+                        
+                        <div class="contact-info">
+                            <strong>Contact Information:</strong><br>
+                            Email: Pranisha.bhuju@gmail.com<br>
+                            Phone: 9846733949
+                        </div>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <section>
+            <section>
+    <section class="behind">
+    <section class="background">
+        <div class="thumb-row">
+            <div class="thumb" ><a href="./member1.html"><img src="../../Assets/Photos/member1.png"></a></div>
+            <div class="thumb" ><a href="./member3.html"><img src="../../Assets/Photos/member3.png"></a></div>
+            <div class="thumb" ><a href="./member4.html"><img src="../../Assets/Photos/member4.png"></a></div>
+            <div class="thumb" ><a href="./member5.html"><img src="../../Assets/Photos/member5.png"></a></div>
+        </div>
+    </section>
+</section>
+        </section>
+        
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../../index.html">Home</a>
+                        <a href="../products.html">Products</a>
+                        <a href="../blog.html">Blog</a>
+                        <a href="../contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

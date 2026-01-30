@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Portfolio">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Pranisha Bhuju">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Devendra's Portfolio | EcoMart</title>
+        <link rel="stylesheet" href="../../CSS/style.css">
+    </head>
+    <style>
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width:70%;
+            margin:30px auto; /* margin of 30px on top and bottom, makes left right side in center*/
+        }
+        .content p, h3{
+            color:#273B09;
+        }
+        /*image*/
+        .photo{
+            border-radius: 10px;
+            padding: 1%;
+            width: 100%;
+            display:inline; /*makes this block take up whole line*/
+            text-align: center; 
+            background-color: rgba(35, 115, 1, 0.2);
+            
+        }
+        .photo img{
+            border: whitesmoke;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 25%;
+            aspect-ratio: 1/1;
+            object-fit:cover;
+            width:25%;
+            max-width: 150px;
+        }
+        .block{
+            padding:2px 8px;
+            background-color: white;
+            box-shadow: inset 5px 0px 0 0 #273B09;
+            margin:10px 0;
+        }
+        
+        /* Thumbnails*/
+        .thumb {
+                width: 100px;
+                height: 60px;
+                
+            }
+            .thumb img{
+                width: 100px;
+                aspect-ratio: 1/ 1;
+                object-fit: cover;  
+            }
+            .behind .background{
+                width:100%;
+            }
+            .behind{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px ;
+                border-radius: 0;
+                width:100%;
+                background-color:rgba(35, 115, 1, 0.2);
+                padding-bottom: 40px;
+            }
+            .background{
+                
+                max-width: 70%;
+                padding:20px;
+                
+            }
+            .thumb {
+                cursor: pointer;
+                transition: transform 0.2s; /* smooth transition on hover */
+            }
+            .thumb-row{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly; /*spaces items evenly */
+            }
+            .thumb img:hover {
+            transform: translate(-5px, -5px); /*moves up on hover*/
+            box-shadow: 3px 3px 0px #273B09;
+            }
+    </style>
+    <body>
+        <body>
+        <nav class="navbar">
+             <div class="logo">
+                <img src="../../Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>|
+                    <li><a href="../blog.html">Blog</a></li>|
+                    <li><a href="../aboutus.html">About Us</a></li>|
+                    <li><a href="../products.html">Products</a></li>|
+                    <li><a href="../contact.html">Contact Page</a></li>|
+                    <li><a href="../helpsupport.html">Help and Support</a></li>|
+                    <li><a href="../login.html">Login</a></li>
+                </ul>
+        </nav>
+        <section class="content">
+            <div class="photo">
+                <img src="../../Assets/Photos/member4.png">
+                <br><h3>Devendra Kandel</h3>
+                <br><p> Ambitious computing student with strong programming skills and a passion for problem‑solving.</p>
+            </div>
+
+            <div class="text">
+                <div class="block">
+                    <p>
+                        <strong>
+                            Education:
+                        </strong>
+                        2022-2023<br>
+                Highschool<br>
+Trinity International College and SS<br>
+NEB (+2) - Science <br><br>
+
+
+2025-Ongoing<br>
+BSc (Hons) Computing<br>
+Islington College<br><br>
+                    </p>
+                </div>
+
+                <div class="block">
+                    <p><strong>Computer Skills:</strong><br>
+C, HTML, CSS, JavaScript, Java</p>
+                </div>
+
+                <div class="block">
+                    <p><strong>Technical Skills:</strong>
+                    <br>Graphics Design<br>
+                    Video Editing<br></p>
+                </div>
+
+                <div class="block">
+                    <p><strong>Languages:</strong><br>
+Native Nepali<br>
+English</p>
+                </div>
+
+                <div class="block">
+                    <p>
+                        <strong>Contact:</strong><br>
+                        Phone: 9701365936<br>
+                        Gmail: jeevankdl166@gmail.com
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="behind">
+    <section class="background">
+        <div class="thumb-row">
+            <div class="thumb" ><a href="./member1.html"><img src="../../Assets/Photos/member1.png"></a></div>
+            <div class="thumb" ><a href="./member2.html"><img src="../../Assets/Photos/member2.png"></a></div>
+            <div class="thumb" ><a href="./member3.html"><img src="../../Assets/Photos/member3.png"></a></div>
+            <div class="thumb" ><a href="./member5.html"><img src="../../Assets/Photos/member5.png"></a></div>
+        </div>
+    </section>
+</section>
+        <section>
+
+        </section>
+       <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="../../index.html">Home</a>
+                        <a href="../products.html">Products</a>
+                        <a href="../blog.html">Blog</a>
+                        <a href="../contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+    </body>
+    </body>
+</html>
