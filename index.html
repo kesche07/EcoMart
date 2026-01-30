@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Homepage">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Devendra Kandel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | EcoMart</title>
+<style>
+.aboutus {
+  background-image: url('Assets/background.jpg'); /* background image */
+  background-size: cover;       /* covers the whole section */
+  background-position: center;  /* center the image */
+  height: 400px;                
+  display: flex;
+  align-items: center;          /* vertically center text */
+  justify-content: center;      /* horizontally center text */
+  position: relative;
+  color: white;                 /* text color */
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+
+#img {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out; /* fade effect */
+}
+
+.product {
+  width: 30%;
+  max-width: 400px;         
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0);
+   transition:0.2s;
+}
+
+.product img {
+  width:90%;
+  aspect-ratio: 1/1;           /* fixed height for consistency */
+  object-fit: cover;       /* crop/scale to fit neatly */
+  border: 0.5px solid #000;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+
+.product:hover {
+  transform: translate(-5px, -5px); /*moves up on hover*/
+    box-shadow: 3px 3px 0px #273B09; 
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+.products{
+  display:flex;
+  justify-content: center;
+  margin:30px;
+  
+}
+.products button{
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #273B09;
+  border-style: inset;
+  border-color: #273B09;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+a{
+  text-decoration: none;
+}
+</style> </head>
+<body>
+      <link rel="stylesheet" href="CSS/style.css">
+              <nav class="navbar">
+             <div class="logo">
+                <img src="Assets/logo.png" alt="logo">
+            </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>|
+                    <li><a href="./Pages/blog.html">Blog</a></li>|
+                    <li><a href="./Pages/aboutus.html">About Us</a></li>|
+                    <li><a href="./Pages/products.html">Products</a></li>|
+                    <li><a href="./Pages/contact.html">Contact Page</a></li>|
+                    <li><a href="./Pages/helpsupport.html">Help and Support</a></li>|
+                    <li><a href="./Pages/login.html">Login</a></li>
+                </ul>
+        </nav>
+
+ 
+
+   <div class="aboutus">
+    <div class="overlay">
+      <h1 style="text-align: center;">
+      <a href="./aboutus.html" style="text-decoration: none; color: inherit;">About Us</a>
+    </h1>
+        <p>
+        We are committed to providing eco-friendly, sustainable products that make a difference.
+        Our mission is to combine quality with responsibility for a greener future.
+     </p>
+    </div>
+  </div><br>
+
+    <h1 style="text-align: center; display: block; width: 100%;"> Our Top selling products</h1>
+    <section class="products">
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button><div id="img">
+  </div><button class="next" onclick="plusSlides(1)">&#10095;</button> <br> <br>
+  </section>
+
+       <!-- Footer -->
+    <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>EcoMart</h3>
+                        <p>Making sustainable living simple, affordable, and accessible for everyone.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3><br>
+                        <a href="#">Home</a>
+                        <a href="./Pages/products.html">Products</a>
+                        <a href="./Pages/blog.html">Blog</a>
+                        <a href="./Pages/blog.html">Contact Us</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p> contact@ecomartnp.com</p>
+                        <p> 011-98646</p>
+                        <p></i> Baneshwor, Kathmandu</p>
+                    </div>
+                </div>
+                <hr><br>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EcoMart. All rights reserved. | Designed with ♥ by the EcoMart Team</p> <br>
+                </div>
+            </div>
+        </footer>
+
+<script src="./JS/script.js"></script>
+</body>
+<script>
+  const images = ['Assets/product1.jpg','Assets/product2.jpg','Assets/product3.jpg','Assets/product4.jpg','Assets/product5.jpg','Assets/product6.jpg']; //images of product
+  const names = ['Bamboo bottle','Bamboo Toothbrush','Hello Tea','Wooden Utensil Set','Eco plate','Eco comb']; //names of products
+  let x=0; // starting idex of slideshow
+  const img=document.getElementById('img'); // gets img id
+ 
+  showProducts();
+
+  function showProducts() {
+    var currentImages = images.slice(x, x + 3);
+    var currentNames = names.slice(x, x + 3);
+
+    /*changes img in html*/img.innerHTML = currentImages.map((src, i) => 
+    //loops through each item, where src is the src of image and i is index of item visible
+    {
+        // Calculate the actual index in the full array
+        var actualIndex = x + i;  //index of slideshow + position inside group
+
+        return ` 
+            <div class="product" onclick="goToDetails(${actualIndex})">
+                <img src="${src}">
+                <p class="label">${currentNames[i]}</p>
+            </div>`;
+    }).join(''); // combines all returned HTML strings into one string
+}
+
+  function goToDetails(index) {
+        window.location.href = "Pages/productdetail.html?id="+ index; //redirects to the page and starts query index for that products index
+    }
+
+function plusSlides(n) //runs when button is clicked
+{
+  x += n; //updates index position of item in slideshow
+
+  
+  if (x < 0) { //makes it show the last image if index is zero, so it goes to 6
+    x = images.length - 3;
+  } 
+  if (x > images.length - 3) { //makes x back to 0
+    x = 0;
+  }
+  showProducts(); //calls function to display new img
+}
+  
+
+</script>
+</html>
